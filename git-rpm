@@ -2,7 +2,7 @@
 
 specfile=`ls -1 | grep .spec | head -n 1`
 name=`grep "Name:" $specfile | awk '{print $2}'`
-version=`grep "Version:" git-rpm.spec | awk '{print $2}'`
+version=`grep "Version:" $specfile | awk '{print $2}'`
 
 pwd=`pwd`
 mkdir -p rpm/SOURCES >/dev/null 2>&1
